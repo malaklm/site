@@ -41,10 +41,11 @@ hr.star-dark:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 2em;
+  background-color: #fa983a;
 }
 
 hr.star-light {
-  border-color: #fff;
+  border-color: black;
 }
 
 hr.star-light:after {
