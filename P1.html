@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Bike_Share_Analysis</title>
+<title>v1</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13072,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13117,8 +13117,8 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <header>
-               <img src="https://i.postimg.cc/FRVSXj7M/We-are-having-a-   baby-girl.jpg" alt="wndy-brrs2" 
-                border="10" height="600" width="1500">                                                           
+               <img src="https://i.postimg.cc/FRVSXj7M/We-are-having-a-   baby-girl.jpg" alt="wndy-brrs2"
+                border="10" height="600" width="1500">
 </header>
 </div>
 </div>
@@ -13147,13 +13147,9 @@ div#notebook {
 <a id='intro'></a>
 
  ## Introduction
-
-> **Tip**: Quoted sections like this will provide helpful instructions on how to navigate and use a Jupyter notebook.
-
-
 Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles for short trips, typically 30 minutes or less. Thanks to the rise in information technologies, it is easy for a user of the system to access a dock within the system to unlock or return bicycles. These technologies also provide a wealth of data that can be used to explore how these bike-sharing systems are used.
 
-In this project, you will perform an exploratory analysis on data provided by [Motivate](https://www.motivateco.com/), a bike-share system provider for many major cities in the United States. You will compare the system usage between three large cities: New York City, Chicago, and Washington, DC. You will also see if there are any differences within each system for those users that are registered, regular users and those users that are short-term, casual users.
+In this project, we will perform an exploratory analysis on data provided by [Motivate](https://www.motivateco.com/), a bike-share system provider for many major cities in the United States. We will compare the system usage between three large cities: New York City, Chicago, and Washington, DC. We will also see if there are any differences within each system for those users that are registered, regular users and those users that are short-term, casual users.
 
 </div>
 </div>
@@ -13164,16 +13160,17 @@ In this project, you will perform an exploratory analysis on data provided by [M
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: left">
    <a id='pose_questions'></a>
+
    ## Posing Questions
-   Before looking at the bike sharing data, you should start by asking questions you might want to understand about the bike share data. Consider, for example, if you were working for Motivate. What kinds of information would you want to know about in order to make smarter business decisions? If you were a user of the bike-share service, what factors might influence how you would want to use the service?
+   Before looking at the bike sharing data, We should start by asking questions we might want to understand about the bike share data. Consider, for example, if you were working for Motivate. What kinds of information would you want to know about in order to make smarter business decisions? If you were a user of the bike-share service, what factors might influence how you would want to use the service?
 </div>
 <br />
 <div style="text-align: left">
-   <span style="background-color: #82ccdd;color:#ffffff" >
+   <span style="background-color: #82ccdd;color:black" >
    Question 1: Write at least two questions related to bike sharing that you think could be answered by data.
    </span>
    <br />
-   **Answer:** 
+   **Answer:**
    <br />
    <span style="background-color: #FD7272;color:#ffffff" >
    Before I see the data:<br />
@@ -13186,10 +13183,9 @@ In this project, you will perform an exploratory analysis on data provided by [M
    After I looked at the data, I suggest these questions:<br />
    </span>
    Q5. At the 3 datasets, there are a start and end stations points. So, what are the most stations visited at each city? is there a specific path between these stations occurs?<br />
-   Q6. Can I calculate the total duration trips per year of these cities? 
+   Q6. Can I calculate the total duration trips per year of these cities?
    <br /><br />
 
-  > **Tip**: If you double click on this cell, you will see the text change so that all of the formatting is removed. This allows you to edit this block of text. This block of text is written using [Markdown](http://daringfireball.net/projects/markdown/syntax), which is a way to format text using headers, links, italics, and many other options using a plain-text syntax. You will also use Markdown later in the Nanodegree program. Use **Shift** + **Enter** or **Shift** + **Return** to run the cell and show its rendered form.
 </div>
 </div>
 </div>
@@ -13216,19 +13212,18 @@ Now it's time to collect and explore our data. In this project, we will focus on
 - Chicago (Divvy): [Link](https://www.divvybikes.com/system-data)
 - Washington, DC (Capital Bikeshare): [Link](https://www.capitalbikeshare.com/system-data)
 
-If you visit these pages, you will notice that each city has a different way of delivering its data. Chicago updates with new data twice a year, Washington DC is quarterly, and New York City is monthly. **However, you do not need to download the data yourself.** The data has already been collected for you in the `/data/` folder of the project files. While the original data for 2016 is spread among multiple files for each city, the files in the `/data/` folder collect all of the trip data for the year into one file per city. Some data wrangling of inconsistencies in timestamp format within each city has already been performed for you. In addition, a random 2% sample of the original data is taken to make the exploration more manageable. 
+If you visit these pages, you will notice that each city has a different way of delivering its data. Chicago updates with new data twice a year, Washington DC is quarterly, and New York City is monthly. The data has already been collected for you in the `/data/` folder of the project files. While the original data for 2016 is spread among multiple files for each city, the files in the `/data/` folder collect all of the trip data for the year into one file per city. Some data wrangling of inconsistencies in timestamp format within each city has already been performed for you. In addition, a random 2% sample of the original data is taken to make the exploration more manageable.
 
 <br />
-<span style="background-color: #82ccdd;color:#ffffff" >
-    **Question 2**: However, there is still a lot of data for us to investigate, so it's a good idea to start off by looking at one entry from each of the cities we're going to analyze. Run the first code cell below to load some packages and functions that you'll be using in your analysis. Then, complete the second code cell to print out the first trip recorded from each of the cities (the second line of each data file).</div><blockquote><p><strong>Tip</strong>: You can run a code cell like you formatted Markdown cells above by clicking on the cell and using the keyboard shortcut <strong>Shift</strong> + <strong>Enter</strong> or <strong>Shift</strong> + <strong>Return</strong>. Alternatively, a code cell can be executed using the <strong>Play</strong> button in the toolbar after selecting it. While the cell is running, you will see an asterisk in the message to the left of the cell, i.e. <code>In [*]:</code>. The asterisk will change into a number to show that execution has completed, e.g. <code>In [1]</code>. If there is output, it will show up as <code>Out [1]:</code>, with an appropriate number to match the "In" number.&lt;/div&gt;</p>
-</blockquote>
-
+<span style="background-color: #82ccdd;color:black" >
+    **Question 2**: However, there is still a lot of data for us to investigate, so it's a good idea to start off by looking at one entry from each of the cities we're going to analyze. Run the first code cell below to load some packages and functions that you'll be using in your analysis. Then, complete the second code cell to print out the first trip recorded from each of the cities (the second line of each data file).</div>
+</div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## import all necessary packages and functions.</span>
@@ -13236,7 +13231,7 @@ If you visit these pages, you will notice that each city has a different way of 
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span> <span class="c1"># operations to parse dates</span>
 <span class="kn">from</span> <span class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span> <span class="c1"># use to print data structures like dictionaries in</span>
                           <span class="c1"># a nicer way than the base print function.</span>
-    
+
 </pre></div>
 
     </div>
@@ -13246,7 +13241,7 @@ If you visit these pages, you will notice that each city has a different way of 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_first_point</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -13257,24 +13252,24 @@ If you visit these pages, you will notice that each city has a different way of 
     <span class="c1"># print city name for reference</span>
     <span class="n">city</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">City: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city</span><span class="p">))</span>
-    
+
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
         <span class="c1">## TODO: Use the csv library to set up a DictReader object. ##</span>
         <span class="c1">## see https://docs.python.org/3/library/csv.html           ##</span>
         <span class="n">trip_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="c1">## TODO: Use a function on the DictReader object to read the     ##</span>
         <span class="c1">## first trip from the data file and store it in a variable.     ##</span>
         <span class="c1">## see https://docs.python.org/3/library/csv.html#reader-objects ##</span>
         <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">trip_reader</span><span class="p">)</span>
-        
+
         <span class="c1">## TODO: Use the pprint library to print the first trip. ##</span>
         <span class="c1">## see https://docs.python.org/3/library/pprint.html     ##</span>
-        <span class="kn">import</span> <span class="nn">pprint</span> 
+        <span class="kn">import</span> <span class="nn">pprint</span>
         <span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="o">.</span><span class="n">PrettyPrinter</span><span class="p">()</span>
         <span class="n">pp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">first_trip</span><span class="p">)</span>
-        
-        
+
+
     <span class="c1"># output city name and first trip for later testing</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">first_trip</span><span class="p">)</span>
 
@@ -13369,7 +13364,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 <li><strong>Month</strong>, <strong>Hour</strong>, <strong>Day of Week</strong>: Ridership volume is likely to change based on the season, time of day, and whether it is a weekday or weekend. Use the start time of the trip to obtain these values. The New York City data includes the seconds in their timestamps, while Washington and Chicago do not. The <a href="https://docs.python.org/3/library/datetime.html"><code>datetime</code></a> package will be very useful here to make the needed conversions.</li>
 <li><strong>User Type</strong>: It is possible that users who are subscribed to a bike-share system will have different patterns of use compared to users who only have temporary passes. Washington divides its users into two types: 'Registered' for users with annual, monthly, and other longer-term subscriptions, and 'Casual', for users with 24-hour, 3-day, and other short-term passes. The New York and Chicago data uses 'Subscriber' and 'Customer' for these groups, respectively. For consistency, you will convert the Washington labels to match the other two.</li>
 </ul>
-<p><span style="background-color: #82ccdd;color:#ffffff" >
+<p><span style="background-color: #82ccdd;color:black" >
     **Question 3a**: Complete the helper functions in the code cells below to address each of the cleaning tasks described above.
 </span></p>
 
@@ -13378,11 +13373,11 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">duration_in_mins</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
-    
+
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes as input a dictionary containing info about a single trip (datum) and</span>
 <span class="sd">    its origin city (city) and returns the trip duration in units of minutes.</span>
@@ -13395,8 +13390,8 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 <span class="sd">    numeric type when making your transformations.</span>
 <span class="sd">    see https://docs.python.org/3/library/functions.html</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
-    
+
+
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    my test print statements</span>
 <span class="sd">    print(datum[&#39;tripduration&#39;])</span>
@@ -13409,8 +13404,8 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 <span class="sd">    https://docs.python.org/2/tutorial/floatingpoint.html</span>
 <span class="sd">    duration= round(min, 4)</span>
 <span class="sd">   &quot;&quot;&quot;</span>
-    
-    
+
+
     <span class="k">if</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;NYC&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;Chicago&quot;</span><span class="p">):</span>
         <span class="n">duration</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;tripduration&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
@@ -13418,12 +13413,12 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
     <span class="k">elif</span> <span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;Washington&quot;</span><span class="p">:</span>
         <span class="n">duration</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Duration (ms)&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
-        
+
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;City: Wrong Massage&quot;</span><span class="p">)</span>
-  
 
-    <span class="k">return</span> <span class="n">duration</span>    
+
+    <span class="k">return</span> <span class="n">duration</span>
 
 
 <span class="c1"># Some tests to check that your code works. There should be no output if all of</span>
@@ -13472,7 +13467,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_of_trip</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -13487,44 +13482,44 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 <span class="sd">    strings into a format that is useful for extracting the desired information.</span>
 <span class="sd">    see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
-    
+
+
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    I watched this vedio to understand how to formatting of the DateTime object work </span>
 <span class="sd">    and how to convert it from the string. </span>
 <span class="sd">    https://www.youtube.com/watch?v=BSL7lOgVX-8</span>
 <span class="sd">    Now I will try to specify the variables based on dataset format</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="c1"># YOUR CODE HERE</span>
-    
+
     <span class="nb">format</span> <span class="o">=</span><span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y %H:%M:%S&quot;</span>
     <span class="n">format2</span><span class="o">=</span> <span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y %H:%M&quot;</span>
-    
-    
-    <span class="k">if</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;NYC&#39;</span><span class="p">:</span> 
+
+
+    <span class="k">if</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;NYC&#39;</span><span class="p">:</span>
         <span class="n">datetime_obj</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s2">&quot;starttime&quot;</span><span class="p">],</span><span class="nb">format</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">))</span>
         <span class="n">month</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span>
         <span class="n">hour</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span>
         <span class="n">day_of_week</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">)</span>
-    
+
     <span class="k">elif</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">:</span>
         <span class="n">datetime_obj</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s2">&quot;starttime&quot;</span><span class="p">],</span> <span class="n">format2</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">))</span>
         <span class="n">month</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span>
         <span class="n">hour</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span>
         <span class="n">day_of_week</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">)</span>
- 
+
     <span class="k">elif</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span>
-        <span class="n">datetime_obj</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Start date&#39;</span><span class="p">],</span><span class="n">format2</span><span class="p">)</span> 
+        <span class="n">datetime_obj</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Start date&#39;</span><span class="p">],</span><span class="n">format2</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">))</span>
         <span class="n">month</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">month</span>
         <span class="n">hour</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">hour</span>
         <span class="n">day_of_week</span> <span class="o">=</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%A&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;City: Wrong Massage&quot;</span><span class="p">)</span>
-        
+
     <span class="k">return</span> <span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">day_of_week</span><span class="p">)</span>
 
 <span class="c1"># Some tests to check that your code works. There should be no output if all of</span>
@@ -13573,7 +13568,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">type_of_user</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -13585,15 +13580,15 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 <span class="sd">    Remember that Washington has different category names compared to Chicago</span>
 <span class="sd">    and NYC. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="c1"># YOUR CODE HERE</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;NYC&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;Chicago&quot;</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;NYC&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s2">&quot;Chicago&quot;</span><span class="p">):</span>
         <span class="n">user_type</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;usertype&#39;</span><span class="p">]</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">user_type</span><span class="p">)</span>
-    
+
     <span class="k">elif</span> <span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">:</span>
         <span class="n">user_type</span> <span class="o">=</span> <span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Member Type&#39;</span><span class="p">]</span>
-        
+
         <span class="k">if</span> <span class="n">user_type</span> <span class="o">==</span> <span class="s1">&#39;Registered&#39;</span><span class="p">:</span>
             <span class="n">user_type</span> <span class="o">=</span> <span class="s1">&#39;Subscriber&#39;</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">user_type</span><span class="p">)</span>
@@ -13602,7 +13597,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
             <span class="nb">print</span><span class="p">(</span><span class="n">user_type</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;City: Wrong Massage&quot;</span><span class="p">)</span>
-        
+
     <span class="k">return</span> <span class="n">user_type</span>
 
 
@@ -13653,7 +13648,7 @@ Subscriber
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><span style="background-color: #82ccdd;color:#ffffff" >
+<p><span style="background-color: #82ccdd;color:black" >
     **Question 3b**: Now, use the helper functions you wrote above to create a condensed data file for each city     consisting only of the data fields indicated above. In the `/examples/` folder, you will see an example datafile from the [Bay Area Bike Share](http://www.bayareabikeshare.com/open-data) before and after conversion. Make sure that your output is formatted to be consistent with the example file.
     </span></p>
 
@@ -13662,7 +13657,7 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">condense_data</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -13673,14 +13668,14 @@ Subscriber
 <span class="sd">    </span>
 <span class="sd">    HINT: See the cell below to see how the arguments are structured!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
         <span class="c1"># set up csv DictWriter object - writer requires column names for the</span>
         <span class="c1"># first row as the &quot;fieldnames&quot; argument</span>
-        <span class="n">out_colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="s1">&#39;day_of_week&#39;</span><span class="p">,</span> <span class="s1">&#39;user_type&#39;</span><span class="p">]</span>        
+        <span class="n">out_colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="s1">&#39;day_of_week&#39;</span><span class="p">,</span> <span class="s1">&#39;user_type&#39;</span><span class="p">]</span>
         <span class="n">trip_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f_out</span><span class="p">,</span> <span class="n">fieldnames</span> <span class="o">=</span> <span class="n">out_colnames</span><span class="p">)</span>
         <span class="n">trip_writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-        
+
         <span class="c1">## TODO: set up csv DictReader object ##</span>
         <span class="n">trip_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
 
@@ -13688,7 +13683,7 @@ Subscriber
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">trip_reader</span><span class="p">:</span>
             <span class="c1"># set up a dictionary to hold the values for the cleaned and trimmed</span>
             <span class="c1"># data point</span>
-            
+
             <span class="c1"># The data set contain trip duration, starting month, starting hour, </span>
             <span class="c1"># day of the week, and user type</span>
             <span class="n">new_point</span> <span class="o">=</span> <span class="p">{}</span>
@@ -13697,13 +13692,13 @@ Subscriber
             <span class="c1">## the original data dictionaries.                              ##</span>
             <span class="c1">## Note that the keys for the new_point dictionary should match ##</span>
             <span class="c1">## the column names set in the DictWriter object above.         ##</span>
-            
+
             <span class="c1">#1) Calculate the duration</span>
-            <span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">duration_in_mins</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">city</span><span class="p">)</span> 
-                    
+            <span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">duration_in_mins</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">city</span><span class="p">)</span>
+
             <span class="c1">#2) Then get the month , hour and day of week </span>
             <span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">],</span><span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;hour&#39;</span><span class="p">],</span><span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;day_of_week&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_of_trip</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">city</span><span class="p">)</span>
-            
+
             <span class="c1">#3) Finally, get user type</span>
             <span class="n">new_point</span><span class="p">[</span><span class="s1">&#39;user_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">type_of_user</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">city</span><span class="p">)</span>
 
@@ -13711,9 +13706,6 @@ Subscriber
             <span class="c1">## TODO: write the processed information to the output file.     ##</span>
             <span class="c1">## see https://docs.python.org/3/library/csv.html#writer-objects ##</span>
             <span class="n">trip_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">new_point</span><span class="p">)</span>
-            
-            
-            
 </pre></div>
 
     </div>
@@ -13723,7 +13715,7 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Run this cell to check your work</span>
@@ -13752,7 +13744,7 @@ Subscriber
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13770,19 +13762,16 @@ Subscriber
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>Tip</strong>: If you save a jupyter Notebook, the output from running code blocks will also be saved. However, the state of your workspace will be reset once a new session is started. Make sure that you run all of the necessary code blocks from your previous session to reestablish variables and functions before picking up where you last left off.</p>
-</blockquote>
 <div style="align: left">
 <a href="https://ibb.co/e8F2Qf"><img src="https://preview.ibb.co/goYYWL/Untitled-design.jpg" alt="line" border="0" ></a> </div><p><a id='eda'></a></p>
-<h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2><p>Now that you have the data collected and wrangled, you're ready to start exploring the data. In this section you will write some code to compute descriptive statistics from the data. You will also be introduced to the <code>matplotlib</code> library to create some basic histograms of the data.</p>
+<h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2><p>Now that we have the data collected and wrangled, we're ready to start exploring the data. In this section we will write some code to compute descriptive statistics from the data. We will also be introduced to the <code>matplotlib</code> library to create some basic histograms of the data.</p>
 <p><a id='statistics'></a></p>
 <h3 id="Statistics">Statistics<a class="anchor-link" href="#Statistics">&#182;</a></h3><p>First, let's compute some basic counts. The first cell below contains a function that uses the csv module to iterate through a provided data file, returning the number of trips made by subscribers and customers. The second cell runs this function on the example Bay Area data in the <code>/examples/</code> folder. Modify the cells to answer the question below.
 <br /><br />
-<span style="background-color: #82ccdd;color:#ffffff" >
+<span style="background-color: #82ccdd;color:black" >
 **Question 4a**: Which city has the highest number of trips? Which city has the highest proportion of trips made by subscribers? Which city has the highest proportion of trips made by short-term customers?
 </span>
-<br />
-<strong>Answer</strong>:</p>
+<br /></p>
 <table style="align:center,border:1px solid black;">
     <tr style="background-color: #FD7272;color:#ffffff;">
         <th colspan="2"> Answer of Q4a </th>
@@ -13805,7 +13794,7 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_of_trips</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -13816,21 +13805,21 @@ Subscriber
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
         <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="c1"># initialize count variables</span>
         <span class="n">n_subscribers</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">n_customers</span> <span class="o">=</span> <span class="mi">0</span>
-        
+
         <span class="c1"># tally up ride types</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;user_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Subscriber&#39;</span><span class="p">:</span>
                 <span class="n">n_subscribers</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">n_customers</span> <span class="o">+=</span> <span class="mi">1</span>
-        
+
         <span class="c1"># compute total number of rides</span>
         <span class="n">n_total</span> <span class="o">=</span> <span class="n">n_subscribers</span> <span class="o">+</span> <span class="n">n_customers</span>
-        
+
         <span class="c1"># return tallies as a tuple</span>
         <span class="k">return</span><span class="p">(</span><span class="n">n_subscribers</span><span class="p">,</span> <span class="n">n_customers</span><span class="p">,</span> <span class="n">n_total</span><span class="p">)</span>
 </pre></div>
@@ -13842,7 +13831,7 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Modify this and the previous cell to answer Question 4a. Remember to run ##</span>
@@ -13862,7 +13851,7 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2)Creating a 2D Dictionary to store the data to answer Q4a and assign the all values to 0</span>
@@ -13873,18 +13862,18 @@ Subscriber
           <span class="s1">&#39;Washington&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Short-term customers&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Total&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}}</span>
 
 <span class="k">for</span> <span class="n">data_file</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
-    
+
     <span class="n">Subscribers</span><span class="p">,</span><span class="n">customers</span><span class="p">,</span><span class="n">Total</span> <span class="o">=</span> <span class="n">number_of_trips</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">data_file</span> <span class="o">==</span><span class="s1">&#39;./data/NYC-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">customers</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Total</span>
-        
+
     <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">customers</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Total</span>
-        
+
     <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Washington-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span>
         <span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">customers</span>
@@ -13900,19 +13889,19 @@ Subscriber
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3)Print the stat dictionary </span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">p_id</span><span class="p">,</span> <span class="n">p_info</span> <span class="ow">in</span> <span class="n">stat</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">City:&quot;</span><span class="p">,</span> <span class="n">p_id</span><span class="p">)</span>
-    
+
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">p_info</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">p_info</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13959,7 +13948,7 @@ Total: 66326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 4)Find the max total by creating funtion return the city name </span>
@@ -13969,37 +13958,37 @@ Total: 66326
 <span class="sd">    a) if the values don&#39;t equal each other the first 3 if statements work well and find the biggest one.</span>
 <span class="sd">    b) if the values equal to each other, I want to return the statement that describes the scenario.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="n">NYC</span> <span class="o">=</span> <span class="n">num1</span>
     <span class="n">Chicago</span> <span class="o">=</span> <span class="n">num2</span>
     <span class="n">Washington</span> <span class="o">=</span> <span class="n">num3</span>
     <span class="n">equal</span> <span class="o">=</span> <span class="s2">&quot;is/are equal&quot;</span>
-    
+
     <span class="k">if</span> <span class="p">(</span><span class="n">NYC</span> <span class="o">&gt;</span> <span class="n">Chicago</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">NYC</span> <span class="o">&gt;</span> <span class="n">Washington</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;NYC&#39;</span>
-    
+
     <span class="k">elif</span> <span class="p">(</span><span class="n">Chicago</span> <span class="o">&gt;</span> <span class="n">NYC</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">Chicago</span> <span class="o">&gt;</span> <span class="n">Washington</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;Chicago&#39;</span>
-    
+
     <span class="k">elif</span> <span class="p">(</span><span class="n">Washington</span> <span class="o">&gt;</span> <span class="n">NYC</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">Washington</span> <span class="o">&gt;</span> <span class="n">Chicago</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;Washington&#39;</span>
-    
+
     <span class="k">elif</span> <span class="n">NYC</span> <span class="o">==</span> <span class="n">Chicago</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;NYC and Chicago&#39;</span><span class="p">,</span><span class="n">equal</span>
-    
+
     <span class="k">elif</span> <span class="n">NYC</span> <span class="o">==</span> <span class="n">Washington</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;NYC and Washington&#39;</span><span class="p">,</span><span class="n">equal</span>
-    
+
     <span class="k">elif</span> <span class="n">Chicago</span> <span class="o">==</span> <span class="n">Washington</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;Chicago and Washington&#39;</span><span class="p">,</span><span class="n">equal</span>
-    
+
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;All cities are equal&#39;</span>
-    
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Which city has the highest number of trips? &quot;</span><span class="p">,</span><span class="n">find_max</span><span class="p">(</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">],</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Which city has the highest number of trips? &quot;</span><span class="p">,</span><span class="n">find_max</span><span class="p">(</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">],</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">]</span>
       <span class="p">,</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Total&#39;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14029,7 +14018,7 @@ Total: 66326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 5) Calculate highest proportion of trips made by subscribers</span>
@@ -14042,7 +14031,7 @@ Total: 66326
 <span class="c1"># Then pass this value to find_max function </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Which city has the highest proportion of trips made by subscribers? &quot;</span>
       <span class="p">,</span><span class="n">find_max</span><span class="p">(</span><span class="n">NYC_sub_prop</span><span class="p">,</span><span class="n">Chicago_sub_prop</span><span class="p">,</span><span class="n">Washington_sub_prop</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14060,7 +14049,7 @@ Total: 66326
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Which city has the highest proportion of trips made by subscribers?  NYC
-------------------------------------------------
+------------------------------------------------------------------------
 
 </pre>
 </div>
@@ -14072,7 +14061,7 @@ Total: 66326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#6) Calculate highest proportion of trips made by short-term customers</span>
@@ -14084,7 +14073,7 @@ Total: 66326
 <span class="c1"># Then pass this value to find_max function </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Which city has the highest proportion of trips made by Short-term customers? &quot;</span>
       <span class="p">,</span><span class="n">find_max</span><span class="p">(</span><span class="n">NYC_short_prop</span><span class="p">,</span><span class="n">Chicago_short_prop</span><span class="p">,</span><span class="n">Washington_short_prop</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------------------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14102,7 +14091,7 @@ Total: 66326
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Which city has the highest proportion of trips made by Short-term customers?  Chicago
-------------------------------------------------
+-------------------------------------------------------------------------------------
 
 </pre>
 </div>
@@ -14121,7 +14110,7 @@ Total: 66326
 <a href="https://ibb.co/e8F2Qf"><img src="https://preview.ibb.co/goYYWL/Untitled-design.jpg" alt="line" border="0" ></a> </div>
 &lt;/br&gt;</p>
 <p>Now, you will write your own code to continue investigating properties of the data.</p>
-<p><span style="background-color: #82ccdd;color:#ffffff" >
+<p><span style="background-color: #82ccdd;color:black" >
 **Question 4b**: Bike-share systems are designed for riders to take short trips. Most of the time, users are allowed to take trips of 30 minutes or less with no additional charges, with overage charges made for trips of longer than that duration. What is the average trip length for each city? What proportion of rides made in each city are longer than 30 minutes?
 </span></p>
 <p><strong>Answer</strong>:</p>
@@ -14150,18 +14139,18 @@ Total: 66326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">trip_duration</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function reads in a file with trip data and reports the total of trip duration.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
          <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="c1"># initialize count variables</span>
         <span class="n">n_long</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">t_duration</span> <span class="o">=</span> <span class="mi">0</span>
@@ -14172,9 +14161,9 @@ Total: 66326
             <span class="n">n_duration</span><span class="o">+=</span><span class="mi">1</span>
             <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">])</span> <span class="o">&gt;</span><span class="mi">30</span><span class="p">:</span>
                 <span class="n">n_long</span> <span class="o">+=</span> <span class="mi">1</span>
-            
+
         <span class="c1"># return tallies as a tuple</span>
-        <span class="k">return</span><span class="p">(</span><span class="n">t_duration</span><span class="p">,</span> <span class="n">n_duration</span><span class="p">,</span> <span class="n">n_long</span><span class="p">)</span>     
+        <span class="k">return</span><span class="p">(</span><span class="n">t_duration</span><span class="p">,</span> <span class="n">n_duration</span><span class="p">,</span> <span class="n">n_long</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14184,7 +14173,7 @@ Total: 66326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to answer Question 4b.                 ##</span>
@@ -14199,7 +14188,40 @@ Total: 66326
 <span class="c1">#1) Create a 2D Dictionary to store the data to answer Q4b and assign the all values to 0</span>
 <span class="n">stat2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;NYC&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s1">&#39;proportion&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span>
           <span class="s1">&#39;Chicago&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s1">&#39;proportion&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span>
-          <span class="s1">&#39;Washington&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s1">&#39;proportion&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span> 
+          <span class="s1">&#39;Washington&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="s1">&#39;proportion&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2) Calculate the avarage trip duration and proportion of duration longer than 30 minutes</span>
+<span class="k">for</span> <span class="n">data_file</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
+
+    <span class="n">total_duration</span><span class="p">,</span><span class="n">num_duration</span><span class="p">,</span><span class="n">long</span> <span class="o">=</span> <span class="n">trip_duration</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">data_file</span> <span class="o">==</span><span class="s1">&#39;./data/NYC-2016-Summary.csv&#39;</span><span class="p">:</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+
+
+    <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span><span class="p">:</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+
+
+    <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Washington-2016-Summary.csv&#39;</span><span class="p">:</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
+        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:city not found&quot;</span><span class="p">)</span>
+
 </pre></div>
 
     </div>
@@ -14212,49 +14234,16 @@ Total: 66326
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2) Calculate the avarage trip duration and proportion of duration longer than 30 minutes</span>
-<span class="k">for</span> <span class="n">data_file</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
-    
-    <span class="n">total_duration</span><span class="p">,</span><span class="n">num_duration</span><span class="p">,</span><span class="n">long</span> <span class="o">=</span> <span class="n">trip_duration</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">data_file</span> <span class="o">==</span><span class="s1">&#39;./data/NYC-2016-Summary.csv&#39;</span><span class="p">:</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-        
-        
-    <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span><span class="p">:</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-        
-        
-    <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Washington-2016-Summary.csv&#39;</span><span class="p">:</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;avg_duraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total_duration</span><span class="o">/</span><span class="n">num_duration</span>
-        <span class="n">stat2</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">num_duration</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-        
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:city not found&quot;</span><span class="p">)</span>
-   
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#3) Print the stat2 dictionary </span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">p_id</span><span class="p">,</span> <span class="n">p_info</span> <span class="ow">in</span> <span class="n">stat2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">City:&quot;</span><span class="p">,</span> <span class="n">p_id</span><span class="p">)</span>
-    
+
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">p_info</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_info</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14301,7 +14290,7 @@ proportion: 10.8389
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://ibb.co/e8F2Qf"><img src="https://preview.ibb.co/goYYWL/Untitled-design.jpg" alt="line" border="0" ></a> &lt;/div&gt;
 <br /></p>
-<p><span style="background-color: #82ccdd;color:#ffffff" >
+<p><span style="background-color: #82ccdd;color:black" >
 **Question 4c**: Dig deeper into the question of trip duration based on ridership. Choose one city. Within that city, which type of user takes longer rides on average: Subscribers or Customers?
     </span>
 <br />
@@ -14332,18 +14321,18 @@ proportion: 10.8389
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">user_duration</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function reads in a file with trip data and reports the total of trip duration.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
          <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="c1"># initialize count variables</span>
         <span class="n">n_long</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">Subscribers</span> <span class="o">=</span> <span class="mi">0</span>
@@ -14355,7 +14344,7 @@ proportion: 10.8389
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">Customers</span> <span class="o">=</span> <span class="n">Customers</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">])</span>
         <span class="c1"># return tallies as a tuple</span>
-        <span class="k">return</span><span class="p">(</span><span class="n">Subscribers</span><span class="p">,</span> <span class="n">Customers</span><span class="p">)</span>     
+        <span class="k">return</span><span class="p">(</span><span class="n">Subscribers</span><span class="p">,</span> <span class="n">Customers</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14365,7 +14354,7 @@ proportion: 10.8389
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to answer Question 4c. If you have    ##</span>
@@ -14390,30 +14379,30 @@ proportion: 10.8389
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2) Calculate the avarage trip duration and proportion of duration longer than 30 minutes</span>
 <span class="k">for</span> <span class="n">data_file</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
-    
+
     <span class="n">Subscribers</span><span class="p">,</span><span class="n">Customers</span> <span class="o">=</span> <span class="n">user_duration</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">data_file</span> <span class="o">==</span><span class="s1">&#39;./data/NYC-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Customers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span>
-        
-        
+
+
     <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Customers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span>
-        
-        
+
+
     <span class="k">elif</span> <span class="n">data_file</span> <span class="o">==</span> <span class="s1">&#39;./data/Washington-2016-Summary.csv&#39;</span><span class="p">:</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Subscribers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Subscribers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Subscribers&#39;</span><span class="p">]</span>
         <span class="n">stat3</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Avg_Customers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Customers</span><span class="o">/</span><span class="n">stat</span><span class="p">[</span><span class="s1">&#39;Washington&#39;</span><span class="p">][</span><span class="s1">&#39;Short-term customers&#39;</span><span class="p">]</span>
-        
+
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:city not found&quot;</span><span class="p">)</span>
- 
+
 </pre></div>
 
     </div>
@@ -14423,16 +14412,16 @@ proportion: 10.8389
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#3) Print the stat3 dictionary </span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|          Print out of the dictionary          |&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">p_id</span><span class="p">,</span> <span class="n">p_info</span> <span class="ow">in</span> <span class="n">stat3</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">City:&quot;</span><span class="p">,</span> <span class="n">p_id</span><span class="p">)</span>
-    
+
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">p_info</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_info</span><span class="p">[</span><span class="n">key</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------------------------------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -14486,14 +14475,14 @@ Avg_Customers: 41.678
 <a id='visualizations'></a>
 ### Visualizations
 
-The last set of values that you computed should have pulled up an interesting result. While the mean trip time for Subscribers is well under 30 minutes, the mean trip time for Customers is actually _above_ 30 minutes! It will be interesting for us to look at how the trip times are distributed. In order to do this, a new library will be introduced here, `matplotlib`. Run the cell below to load the library and to generate an example plot.
+The last set of values that we computed should have pulled up an interesting result. While the mean trip time for Subscribers is well under 30 minutes, the mean trip time for Customers is actually _above_ 30 minutes! It will be interesting for us to look at how the trip times are distributed. In order to do this, a new library will be introduced here, `matplotlib`. Run the cell below to load the library and to generate an example plot.
 </div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load library</span>
@@ -14502,7 +14491,7 @@ The last set of values that you computed should have pulled up an interesting re
 <span class="c1"># this is a &#39;magic word&#39; that allows for plots to be displayed</span>
 <span class="c1"># inline with the notebook. If you want to know more, see:</span>
 <span class="c1"># http://ipython.readthedocs.io/en/stable/interactive/magics.html</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline 
+<span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="c1"># example histogram, data taken from bay area sample</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">7.65</span><span class="p">,</span>  <span class="mf">8.92</span><span class="p">,</span>  <span class="mf">7.42</span><span class="p">,</span>  <span class="mf">5.50</span><span class="p">,</span> <span class="mf">16.17</span><span class="p">,</span>  <span class="mf">4.20</span><span class="p">,</span>  <span class="mf">8.98</span><span class="p">,</span>  <span class="mf">9.62</span><span class="p">,</span> <span class="mf">11.48</span><span class="p">,</span> <span class="mf">14.33</span><span class="p">,</span>
@@ -14550,7 +14539,7 @@ The last set of values that you computed should have pulled up an interesting re
 In the above cell, we collected fifty trip times in a list, and passed this list as the first argument to the `.hist()` function. This function performs the computations and creates plotting objects for generating a histogram, but the plot is actually not rendered until the `.show()` function is executed. The `.title()` and `.xlabel()` functions provide some labeling for plot context.
 
 You will now use these functions to create a histogram of the trip times for the city you selected in question 4c. Don't separate the Subscribers and Customers for now: just collect all of the trip times and plot them.
- <span style="background-color: #FD7272;color:#ffffff" >
+ <span style="background-color: #FD7272;color:black" >
 Here I will choose Chicago city with me till I complete this journey in my project</span>
 </div>
 </div>
@@ -14558,7 +14547,7 @@ Here I will choose Chicago city with me till I complete this journey in my proje
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to collect all of the trip times as a list ##</span>
@@ -14566,15 +14555,15 @@ Here I will choose Chicago city with me till I complete this journey in my proje
 
 <span class="c1">#1) retrieve Chicago duration Columns</span>
 <span class="n">Chicago_file</span> <span class="o">=</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span>
-<span class="n">Chicago_duration</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">Chicago_duration</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">Chicago_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
          <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="n">Chicago_duration</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]))</span>
-        
+
 
 <span class="c1"># 2)plot the Chicago duration </span>
 <span class="c1">#* I decided to calculate the duration in one hour</span>
@@ -14615,15 +14604,13 @@ Here I will choose Chicago city with me till I complete this journey in my proje
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: left">
-If you followed the use of the `.hist()` and `.show()` functions exactly like in the example, you're probably looking at a plot that's completely unexpected. The plot consists of one extremely tall bar on the left, maybe a very short second bar, and a whole lot of empty space in the center and right. Take a look at the duration values on the x-axis. This suggests that there are some highly infrequent outliers in the data. Instead of reprocessing the data, you will use additional parameters with the `.hist()` function to limit the range of data that is plotted. Documentation for the function can be found [[here]](https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist).
-
-<span style="background-color: #82ccdd;color:#ffffff" >
+<span style="background-color: #82ccdd;color:black" >
     <br /><br />
     <div style="align: left">
 <a href="https://ibb.co/e8F2Qf"><img src="https://preview.ibb.co/goYYWL/Untitled-design.jpg" alt="line" border="0" ></a> </div><br/>
 **Question 5**: Use the parameters of the `.hist()` function to plot the distribution of trip times for the Subscribers in your selected city. Do the same thing for only the Customers. Add limits to the plots so that only trips of duration less than 75 minutes are plotted. As a bonus, set the plots up so that bars are in five-minute wide intervals. For each group, where is the peak of each distribution? How would you describe the shape of each distribution?</span>
 
-**Answer**: Replace this text with your response!
+**Answer**:
 
 <table style="align:left,border:1px solid black;">
     <tr style="background-color: #FD7272;color:#ffffff;">
@@ -14650,7 +14637,7 @@ If you followed the use of the `.hist()` and `.show()` functions exactly like in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to collect all of the trip times as a list ##</span>
@@ -14658,17 +14645,17 @@ If you followed the use of the `.hist()` and `.show()` functions exactly like in
 
 <span class="c1">#1) retrieve Subscribers and Customers trip duration values</span>
 <span class="n">Chicago_file</span> <span class="o">=</span> <span class="s1">&#39;./data/Chicago-2016-Summary.csv&#39;</span>
-<span class="n">Subscribers</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">Subscribers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Customers</span> <span class="o">=</span><span class="p">[]</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">Chicago_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
          <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;user_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Subscriber&#39;</span><span class="p">:</span>
                 <span class="n">Subscribers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]))</span>
-            
+
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">Customers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]))</span>
 
@@ -14702,7 +14689,7 @@ If you followed the use of the `.hist()` and `.show()` functions exactly like in
 
 
 <span class="c1">#Secound chart (Customers)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Trip Duration(m)&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time(m)&#39;</span><span class="p">,</span><span class="n">labelpad</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">Customers</span><span class="p">,</span><span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">75</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FD7272&quot;</span><span class="p">,</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
@@ -14729,19 +14716,14 @@ If you followed the use of the `.hist()` and `.show()` functions exactly like in
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-0a520e2e4c29&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span>Chicago_file<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;r&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f_in<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>          <span class="ansi-red-fg"># set up csv reader object</span>
-<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg">         </span>reader <span class="ansi-blue-fg">=</span> csv<span class="ansi-blue-fg">.</span>DictReader<span class="ansi-blue-fg">(</span>f_in<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span> 
-<span class="ansi-green-intense-fg ansi-bold">     13</span>         <span class="ansi-green-fg">for</span> row <span class="ansi-green-fg">in</span> reader<span class="ansi-blue-fg">:</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;csv&#39; is not defined</pre>
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
+
 </div>
 
 </div>
@@ -14763,14 +14745,14 @@ If you followed the use of the `.hist()` and `.show()` functions exactly like in
 <br/><br/></p>
 <div style="align: left">
 <a href="https://ibb.co/e8F2Qf"><img src="https://preview.ibb.co/goYYWL/Untitled-design.jpg" alt="line" border="0" ></a> </div><br/>
-<span style="background-color: #82ccdd;color:#ffffff" >
+<span style="background-color: #82ccdd;color:black" >
 **Question 6**: Continue the investigation by exploring another question that could be answered by the data available. Document the question you want to explore below. Your investigation should involve at least two variables and should compare at least two groups. You should also use at least one visualization as part of your explorations.</span>
 
 <span style="background-color: #FD7272;color:#ffffff" >From Q1: I chose this:<br />
 point 4) What's the highest month of the trips during the years in Chicago? <br />
 What is the quarter of the year has the most trips in Chicago?</span>
 
-**Answer**: 
+**Answer**:
 <table style="align:left,border:1px solid black;">
     <tr style="background-color: #FD7272;color:#ffffff;">
         <th colspan="2"> Questions </th>
@@ -14781,7 +14763,7 @@ What is the quarter of the year has the most trips in Chicago?</span>
     </tr>
     <tr style="background-color: #ffffff">
         <th>The quarter of the year that has the most trips in Chicago</th>
-        <th>3rd quarter </th> 
+        <th>3rd quarter </th>
     </tr>
 </table>
 </div>
@@ -14790,7 +14772,7 @@ What is the quarter of the year has the most trips in Chicago?</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to continue to explore the dataset. ##</span>
@@ -14803,7 +14785,7 @@ What is the quarter of the year has the most trips in Chicago?</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">Chicago_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span>
         <span class="c1"># set up csv reader object</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
-        
+
 <span class="c1">#2)Store the total value of month trips in the dictionary.</span>
 <span class="c1">#Dictionary keys equal month name then grouped it by quarters</span>
 
@@ -14811,42 +14793,42 @@ What is the quarter of the year has the most trips in Chicago?</span>
                  <span class="p">,</span><span class="s2">&quot;Q2&quot;</span><span class="p">:{</span><span class="s2">&quot;April&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;June&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
                  <span class="p">,</span><span class="s2">&quot;Q3&quot;</span><span class="p">:{</span><span class="s2">&quot;July&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;August&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;September&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
                  <span class="p">,</span><span class="s2">&quot;Q4&quot;</span><span class="p">:{</span><span class="s2">&quot;October&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;November&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;December&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
-        
+
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;January&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;January&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;February&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-            
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;February&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;March&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-            
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q1&quot;</span><span class="p">][</span><span class="s2">&quot;March&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;April&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-            
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;April&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;5&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;May&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-            
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;May&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;6&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;June&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-                
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q2&quot;</span><span class="p">][</span><span class="s2">&quot;June&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;7&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;July&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-            
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;July&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;August&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-                
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;August&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;9&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;September&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-                
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q3&quot;</span><span class="p">][</span><span class="s2">&quot;September&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;10&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;October&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-                
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;October&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;11&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;November&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
-                
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;November&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+
             <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;12&quot;</span><span class="p">:</span>
-                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;December&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span> 
+                <span class="n">month</span><span class="p">[</span><span class="s2">&quot;Q4&quot;</span><span class="p">][</span><span class="s2">&quot;December&quot;</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
 
 
 <span class="c1">#3) plot bar chart that displays all month values grouped by quarter of year </span>
@@ -14955,7 +14937,7 @@ Congratulations on completing the project! This is only a sampling of the data a
 <span style="background-color: #82ccdd;color:#ffffff" >
 **Question 7**: Putting the bike share data aside, think of a topic or field of interest where you would like to be able to apply the techniques of data science. What would you like to be able to learn from your chosen subject?</span>
 
-**Answer**: 
+**Answer**:
 <span style="background-color: #FD7272;color:#ffffff">
 I would like to apply the techniques in the e-commerce field. Because that the number of purchases is increasing rapidly.</br>
 For example, Amazon gains net sales in 2017 177.9 billion dollars compared with net sales in 2016 136$ billion dollars</br>
@@ -14963,24 +14945,16 @@ For example, Amazon gains net sales in 2017 177.9 billion dollars compared with 
 
 (Source: </span> https://expandedramblings.com/index.php/amazon-statistics/).
 <span style="background-color: #FD7272;color:#ffffff">
-This huge number is very interesting. 
+This huge number is very interesting.
 I hope to learn about the customer personal characteristics, the purchasing habits, and I would like to learn how to predict because it's a crazy idea that may let you know about what the future hide.
  </span>
-
-> **Tip**: If we want to share the results of our analysis with others, we aren't limited to giving them a copy of the jupyter Notebook (.ipynb) file. We can also export the Notebook output in a form that can be opened even for those without Python installed. From the **File** menu in the upper left, go to the **Download as** submenu. You can then choose a different format that can be viewed more generally, such as HTML (.html) or
-PDF (.pdf). You may need additional packages or software to perform these exports.
-
-> If you are working on this project via the Project Notebook page in the classroom, you can also submit this project directly from the workspace. **Before you do that**, you should save an HTML copy of the completed project to the workspace by running the code cell below. If it worked correctly, the output code should be a 0, and if you click on the jupyter icon in the upper left, you should see your .html document in the workspace directory. Alternatively, you can download the .html copy of your report following the steps in the previous paragraph, then _upload_ the report to the directory (by clicking the jupyter icon).
-
-> Either way, once you've gotten the .html report in your workspace, you can complete your submission by clicking on the "Submit Project" button to the lower-right hand side of the workspace.
-
 </div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -14997,7 +14971,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15016,8 +14990,8 @@ PDF (.pdf). You may need additional packages or software to perform these export
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <header>
-               <img src="https://i.postimg.cc/vmQfdWvD/Copy-of-We-are-having-a-baby-girl.png" alt="wndy-brrs2" 
-                border="10" height="600" width="1500">                                                           
+               <img src="https://i.postimg.cc/vmQfdWvD/Copy-of-We-are-having-a-baby-girl.png" alt="wndy-brrs2"
+                border="10" height="600" width="1500">
 </header>
 </div>
 </div>
@@ -15026,7 +15000,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
   </div>
 </body>
 
- 
+
 
 
 </html>
