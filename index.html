@@ -40,11 +40,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Projects">Projects</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
             </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Projects">Projects</a>
+            </li>
+
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
@@ -62,12 +63,33 @@
         <h2 class="font-weight-light mb-0">Data Analyst 📊 , Graphic Designer 🎨 </h2>
       </div>
     </header>
+    <!-- About Section -->
+    <section id="about" style="background:#ecf0f1;">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">About</h2>
+        <hr class="star-dark">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="#">
+            <i class="fas fa-download mr-2"></i>
+            Download Now!
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="Projects">
+    <section class="portfolio" id="Projects" style="background:#8395a7;">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Projects</h2>
-        <hr class="star-dark mb-5">
+        <hr class="star-light">
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -86,7 +108,7 @@
                   <i class="fas fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+              <img class="img-fluid" src="img/portfolio/p22.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -133,33 +155,13 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fas fa-download mr-2"></i>
-            Download Now!
-          </a>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" style="background:#ecf0f1;">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <hr class="star-dark mb-5">
+        <hr class="star-dark">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
@@ -276,15 +278,15 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Bike Share Analysis</h2>
+              <h3 class="text-secondary  mb-0">Bike Share Analysis</h3>
               <hr class="star-dark mb-5">
               <img class="img-fluid mb-5" src="img/portfolio/p1.png" alt="">
               <p style="margin: 1px;">
-                <h1>Overview</h1>
+                <h4>Overview</h4>
 As a one of Udacity data analyst Nanodegree program.
  This project use of Python to explore data related to bike share systems for three major bike-share systems in the United States.
 
- <h1>Project Summary </h1>
+ <h4>Project Summary </h4>
  The project compares the system usage between three large cities: New York City, Chicago, and Washington, DC. Also, the project aims to see if there are any differences within each system for those users that are registered,
  regular users and those users that are short-term, casual users.
 
@@ -311,11 +313,19 @@ As a one of Udacity data analyst Nanodegree program.
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <h3 class="text-secondary mb-0">Investigate TMDb Movie Data</h3>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+              <img class="img-fluid mb-5" src="img/portfolio/p2.jpg" alt="">
+              <p style="margin: 1px;">
+                <h4>Overview</h4>
+
+ <h4>Project Summary </h4>
+
+<br /><br /><br />
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill" href="P2.html" style="background:#1dd1a1;border:#1dd1a1;">
+                Open Project</a>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#" style="background:#ff6b6b;border:#ff6b6b;">
                 <i class="fa fa-close"></i>
                 Close Project</a>
             </div>
